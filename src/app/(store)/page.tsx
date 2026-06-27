@@ -98,13 +98,13 @@ export default async function StorePage() {
       <header className="sticky top-0 z-50 bg-[#0f0f0e]/95 backdrop-blur-md border-b border-[#c8a261]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            {/* Logo Marca Estância 27 em SVG */}
-            <svg viewBox="0 0 100 100" className="w-12 h-12 text-[#c8a261]" fill="currentColor">
-              <path d="M50 15 L80 40 L80 75 L50 90 L20 75 L20 40 Z" fill="none" stroke="currentColor" strokeWidth="3" />
-              <path d="M50 25 L50 80" stroke="currentColor" strokeWidth="2" />
-              <path d="M35 55 L65 55" stroke="currentColor" strokeWidth="2" />
-              <circle cx="50" cy="50" r="10" fill="none" stroke="currentColor" strokeWidth="2" />
-            </svg>
+            {/* Logo Marca Estância 27 (Brasão) */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img 
+              src="/logo-brasao.jpg" 
+              alt="Estância 27 Logo" 
+              className="w-12 h-12 rounded-full border border-[#c8a261]/30 object-cover"
+            />
             <div>
               <span className="font-serif text-2xl font-bold tracking-wider text-[#c8a261] block leading-none">ESTÂNCIA 27</span>
               <span className="text-[10px] tracking-[0.2em] text-[#f2ebd9]/60 block mt-1 uppercase">Facas &amp; Cultura</span>
@@ -320,10 +320,12 @@ export default async function StorePage() {
       <footer className="bg-[#0f0f0e] py-12 border-t border-[#c8a261]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            <svg viewBox="0 0 100 100" className="w-8 h-8 text-[#c8a261]/70" fill="currentColor">
-              <path d="M50 15 L80 40 L80 75 L50 90 L20 75 L20 40 Z" fill="none" stroke="currentColor" strokeWidth="3" />
-              <path d="M50 25 L50 80" stroke="currentColor" strokeWidth="2" />
-            </svg>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img 
+              src="/logo-brasao.jpg" 
+              alt="Estância 27 Logo" 
+              className="w-8 h-8 rounded-full border border-[#c8a261]/30 object-cover"
+            />
             <div className="text-left">
               <span className="font-serif text-base tracking-wider text-[#c8a261] block leading-none">ESTÂNCIA 27</span>
               <span className="text-[8px] tracking-[0.2em] text-[#f2ebd9]/40 block uppercase">Facas &amp; Cultura</span>

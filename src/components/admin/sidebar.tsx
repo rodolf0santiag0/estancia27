@@ -49,10 +49,12 @@ export default function Sidebar() {
       <div>
         {/* LOGO ADMIN */}
         <div className="p-6 border-b border-[#c8a261]/10 flex items-center gap-3">
-          <svg viewBox="0 0 100 100" className="w-9 h-9 text-[#c8a261]" fill="currentColor">
-            <path d="M50 15 L80 40 L80 75 L50 90 L20 75 L20 40 Z" fill="none" stroke="currentColor" strokeWidth="3" />
-            <path d="M50 25 L50 80" stroke="currentColor" strokeWidth="2" />
-          </svg>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img 
+            src="/logo-brasao.jpg" 
+            alt="Estância 27 Logo" 
+            className="w-9 h-9 rounded-full border border-[#c8a261]/30 object-cover"
+          />
           <div>
             <span className="font-serif text-base font-bold tracking-wider text-[#c8a261] block leading-none">ESTÂNCIA 27</span>
             <span className="text-[8px] tracking-[0.25em] text-[#f2ebd9]/40 block mt-1 uppercase">Painel CRM</span>
