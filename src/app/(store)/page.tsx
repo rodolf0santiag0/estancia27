@@ -42,7 +42,7 @@ const MOCK_PRODUCTS: Product[] = [
     estoque: 12,
     sku: 'E27-FC-1070',
     erp_id: null,
-    imagem_url: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=600',
+    imagem_url: '/churrasco-mate-2.jpg',
     criado_em: new Date().toISOString()
   },
   {
@@ -54,7 +54,7 @@ const MOCK_PRODUCTS: Product[] = [
     estoque: 8,
     sku: 'E27-CP-PREM',
     erp_id: null,
-    imagem_url: 'https://images.unsplash.com/photo-1589139880155-21d740c03cc5?q=80&w=600',
+    imagem_url: '/churrasco-mate-1.jpg',
     criado_em: new Date().toISOString()
   },
   {
@@ -66,7 +66,7 @@ const MOCK_PRODUCTS: Product[] = [
     estoque: 15,
     sku: 'E27-GT-12PF',
     erp_id: null,
-    imagem_url: 'https://images.unsplash.com/photo-1576016770956-debb63d900bb?q=80&w=600',
+    imagem_url: '/churrasco-mate-1.jpg',
     criado_em: new Date().toISOString()
   },
   {
@@ -78,7 +78,7 @@ const MOCK_PRODUCTS: Product[] = [
     estoque: 20,
     sku: 'E27-GF-TRID',
     erp_id: null,
-    imagem_url: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600',
+    imagem_url: '/churrasco-mate-2.jpg',
     criado_em: new Date().toISOString()
   }
 ]
@@ -127,10 +127,19 @@ export default async function StorePage() {
 
       {/* HERO SECTION */}
       <section className="relative py-28 md:py-36 bg-gradient-to-b from-[#1c1b18] via-[#0f0f0e] to-[#0f0f0e] overflow-hidden border-b border-[#c8a261]/10">
-        <div className="absolute inset-0 opacity-10 bg-cover bg-center pointer-events-none" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200')" }}></div>
+        <div className="absolute inset-0 opacity-20 bg-cover bg-center pointer-events-none" style={{ backgroundImage: "url('/churrasco-mate-1.jpg')" }}></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#c8a261]/5 rounded-full blur-[100px] pointer-events-none"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          {/* Brasão Oficial da Marca */}
+          <div className="flex justify-center mb-6 animate-fadeIn">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img 
+              src="/logo-brasao.jpg" 
+              alt="Estância 27 Brasão" 
+              className="w-32 h-32 md:w-40 md:h-40 rounded-full border border-[#c8a261]/30 object-cover shadow-2xl shadow-[#c8a261]/15"
+            />
+          </div>
           <div className="inline-flex items-center gap-2 border border-[#c8a261]/30 px-3 py-1 rounded-full text-xs text-[#c8a261] bg-[#c8a261]/5 tracking-wider uppercase mb-6">
             <span className="w-1.5 h-1.5 bg-[#bd3a1d] rounded-full animate-pulse"></span>
             Qualidade Superior desde Santa Catarina
@@ -170,7 +179,7 @@ export default async function StorePage() {
               <div key={raffle.id} className="bg-[#1c1b18] border border-[#c8a261]/10 rounded-sm overflow-hidden flex flex-col sm:flex-row shadow-xl">
                 {/* Imagem Placeholder Decorativa */}
                 <div className="relative w-full sm:w-48 h-48 sm:h-auto bg-[#0f0f0e] flex items-center justify-center overflow-hidden shrink-0 border-b sm:border-b-0 sm:border-r border-[#c8a261]/10">
-                  <div className="absolute inset-0 bg-cover bg-center opacity-60" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=400')` }}></div>
+                  <div className="absolute inset-0 bg-cover bg-center opacity-60" style={{ backgroundImage: `url(${raffle.id === 'mock-raffle-1' ? '/churrasco-mate-2.jpg' : '/churrasco-mate-1.jpg'})` }}></div>
                   <div className="absolute top-3 left-3 bg-[#bd3a1d] text-white text-[10px] font-bold px-2 py-0.5 rounded-full tracking-wider uppercase animate-pulse">
                     Ativa
                   </div>
@@ -231,7 +240,7 @@ export default async function StorePage() {
                 <Link href={`/products/${product.id}`} className="h-56 bg-[#0f0f0e] relative overflow-hidden flex items-center justify-center block">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img 
-                    src={product.imagem_url || 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=400'} 
+                    src={product.imagem_url || (product.categoria === 'Corte' || product.categoria === 'Outros' ? '/churrasco-mate-2.jpg' : '/churrasco-mate-1.jpg')} 
                     alt={product.nome}
                     className="object-cover w-full h-full group-hover:scale-105 transition duration-500 opacity-80"
                   />

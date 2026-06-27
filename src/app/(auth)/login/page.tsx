@@ -153,20 +153,22 @@ export default function LoginPage() {
     <div className="min-h-screen flex-1 flex flex-col items-center justify-center bg-[#0f0f0e] relative py-12 px-4">
       {/* Imagem de background premium sutil de churrasco */}
       <div 
-        className="absolute inset-0 opacity-5 bg-cover bg-center pointer-events-none" 
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200')" }}
+        className="absolute inset-0 opacity-10 bg-cover bg-center pointer-events-none" 
+        style={{ backgroundImage: "url('/churrasco-mate-1.jpg')" }}
       ></div>
 
       {/* HEADER / LOGO */}
       <div className="mb-8 text-center relative z-10 flex flex-col items-center">
-        <Link href="/" className="flex items-center gap-3">
-          <svg viewBox="0 0 100 100" className="w-12 h-12 text-[#c8a261]" fill="currentColor">
-            <path d="M50 15 L80 40 L80 75 L50 90 L20 75 L20 40 Z" fill="none" stroke="currentColor" strokeWidth="3" />
-            <path d="M50 25 L50 80" stroke="currentColor" strokeWidth="2" />
-          </svg>
-          <div className="text-left">
+        <Link href="/" className="flex flex-col items-center gap-2">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img 
+            src="/logo-brasao.jpg" 
+            alt="Estância 27 Logo" 
+            className="w-20 h-20 rounded-full border border-[#c8a261]/25 object-cover mb-1 shadow-lg shadow-[#c8a261]/10"
+          />
+          <div className="text-center">
             <span className="font-serif text-2xl font-bold tracking-wider text-[#c8a261] block leading-none">ESTÂNCIA 27</span>
-            <span className="text-[10px] tracking-[0.2em] text-[#f2ebd9]/60 block mt-1 uppercase">Facas &amp; Cultura</span>
+            <span className="text-[10px] tracking-[0.2em] text-[#f2ebd9]/60 block mt-1.5 uppercase">Facas &amp; Cultura</span>
           </div>
         </Link>
       </div>

@@ -18,7 +18,19 @@ const MOCK_RAFFLES: Raffle[] = [
     cotas_vendidas: 740,
     status: 'Ativa',
     data_sorteio: null,
-    criado_em: new Date().toISOString()
+    criado_em: new Date().toISOString(),
+    produto_premio: {
+      id: 'mock-prod-pre-1',
+      nome: 'Faca Damasco 9" Estância 27',
+      descricao: 'Aço damasco premium',
+      preco: 890,
+      categoria: 'Corte',
+      estoque: 1,
+      sku: 'E27-FD-9',
+      erp_id: null,
+      imagem_url: '/churrasco-mate-2.jpg',
+      criado_em: new Date().toISOString()
+    }
   },
   {
     id: 'mock-raffle-2',
@@ -30,7 +42,19 @@ const MOCK_RAFFLES: Raffle[] = [
     cotas_vendidas: 410,
     status: 'Ativa',
     data_sorteio: null,
-    criado_em: new Date().toISOString()
+    criado_em: new Date().toISOString(),
+    produto_premio: {
+      id: 'mock-prod-pre-2',
+      nome: 'Kit Mate Premium com Prata 600',
+      descricao: 'Garrafa e cuia especial',
+      preco: 490,
+      categoria: 'Mate',
+      estoque: 1,
+      sku: 'E27-KMP',
+      erp_id: null,
+      imagem_url: '/churrasco-mate-1.jpg',
+      criado_em: new Date().toISOString()
+    }
   }
 ]
 
@@ -123,7 +147,7 @@ export default async function RaffleDetailPage({ params }: RaffleDetailPageProps
                   <div className="w-12 h-12 bg-zinc-800 rounded-sm overflow-hidden shrink-0">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img 
-                      src={raffle.produto_premio.imagem_url || 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=200'} 
+                      src={raffle.produto_premio.imagem_url || '/churrasco-mate-2.jpg'} 
                       alt={raffle.produto_premio.nome} 
                       className="object-cover w-full h-full"
                     />

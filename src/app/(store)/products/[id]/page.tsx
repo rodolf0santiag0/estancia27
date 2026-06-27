@@ -15,7 +15,7 @@ const MOCK_PRODUCTS: Product[] = [
     estoque: 12,
     sku: 'E27-FC-1070',
     erp_id: null,
-    imagem_url: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=600',
+    imagem_url: '/churrasco-mate-2.jpg',
     criado_em: new Date().toISOString()
   },
   {
@@ -27,7 +27,7 @@ const MOCK_PRODUCTS: Product[] = [
     estoque: 8,
     sku: 'E27-CP-PREM',
     erp_id: null,
-    imagem_url: 'https://images.unsplash.com/photo-1589139880155-21d740c03cc5?q=80&w=600',
+    imagem_url: '/churrasco-mate-1.jpg',
     criado_em: new Date().toISOString()
   },
   {
@@ -39,7 +39,7 @@ const MOCK_PRODUCTS: Product[] = [
     estoque: 15,
     sku: 'E27-GT-12PF',
     erp_id: null,
-    imagem_url: 'https://images.unsplash.com/photo-1576016770956-debb63d900bb?q=80&w=600',
+    imagem_url: '/churrasco-mate-1.jpg',
     criado_em: new Date().toISOString()
   },
   {
@@ -51,7 +51,7 @@ const MOCK_PRODUCTS: Product[] = [
     estoque: 20,
     sku: 'E27-GF-TRID',
     erp_id: null,
-    imagem_url: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600',
+    imagem_url: '/churrasco-mate-2.jpg',
     criado_em: new Date().toISOString()
   }
 ]
